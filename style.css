@@ -115,7 +115,7 @@ a{
 }
 
 
-#sunone {
+#sun {
    position: absolute; 
    right: -10px;           
    top: 5%;           
@@ -227,7 +227,7 @@ a{
       z-index:1;
    }
 
-   #sunone {
+   #sun {
       position: absolute; 
       right: -10px;           
       top: 15%;           
