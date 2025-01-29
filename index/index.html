@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>ParallaxJS</title>
+</head>
+<body>
+    <section class="after-section-blend" >
+        <img src="bgheaven.jpg" id="bg">
+        <img src="mountaingarden.png" id="mountain">
+        <img src="pngegg.png" id="sunone">
+        <h1 id="text" class="mt-5" style="font-weight:bold;">WELCOME</h1>
+        <div class="arrows" data-aos="fade-up">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+        </div>
+    </section>
+    <section>
+        <div class="container content ">
+            <div class="container-fluid align-items-center">
+                <div class="row"> 
+                    <div class="col-sm-12 text-center"> 
+                        <h2 data-aos="fade-up"> Conheça um pouco sobre os Andes </h2>
+                        <p data-aos="fade-up">A <b>cordilheira dos Andes</b> (em <a  title="Língua quíchua">quíchua</a>: <i>Anti(s)</i>) é uma vasta <a  title="Cordilheira">cadeia montanhosa</a> formada por um sistema contínuo de <a  title="Montanha">montanhas</a> ao longo da costa ocidental da <a title="América do Sul">América do Sul</a>, sendo a formação geológica desta datada do período <a  title="Terciário">Terciário</a>. A cordilheira possui aproximadamente oito mil quilômetros de extensão. É a maior cadeia de montanhas do mundo (em comprimento), e em seus trechos mais largos chega a 160 km do extremo leste ao oeste. Sua altitude média gira em torno de 4&nbsp;000 m e seu ponto culminante é o <a  title="Aconcágua">monte Aconcágua</a>, com 6 962 m de <a  title="Altitude">altitude</a>.
+                        <p data-aos="fade-up">A cordilheira dos Andes se estende desde a <a  title="Patagónia">Patagônia</a> até a costa do <a  title="Mar do Caribe">mar do Caribe</a>, atravessando todo o <a  title="América do Sul">continente sul-americano</a> de sul a norte, caracterizando a paisagem montanhosa do <a  title="Argentina">Argentina</a>, <a  title="Chile">Chile</a>, <a  title="Bolívia">Bolívia</a>, <a  title="Peru">Peru</a>, <a  title="Equador">Equador</a>, <a  title="Colômbia">Colômbia</a> e oeste da <a  title="Venezuela">Venezuela</a> também conhecidos como <a  title="América Andina">América Andina</a>. A cordilheira surgiu em resultado de um choque ocorrido entre duas <a  title="Placa tectónica">placas tectônicas</a>: há milhões de anos, a <a  title="Placa de Nasca">placa de Nazca</a> moveu-se em direção à <a  title="Placa Sul-Americana">placa sul-americana</a>, dando origem às elevadas <a  title="Montanha">montanhas</a> que hoje formam a cordilheira dos Andes.<sup id="cite_ref-caracterizacaomorfoclimatica_1-0" class="reference"></sup></p>
+                        <p data-aos="fade-up">Nos territórios da Colômbia e da Venezuela a cordilheira se ramifica e se prolonga até quase alcançar o <a  title="Mar do Caribe">mar do Caribe</a>. Em sua parte meridional serve de longa fronteira natural entre <a  title="Chile">Chile</a> e <a  title="Argentina">Argentina</a>. Na zona central, os Andes se alargam dando lugar a um planalto elevado conhecido como <a  title="Altiplano andino">Altiplano</a>, partilhado pelo Peru, Bolívia e Chile. A cordilheira volta a estreitar-se no norte do Peru e se alarga novamente na Colômbia para estreitar-se e dividir-se ao entrar na Venezuela.<sup id="cite_ref-MountainRange_2-0" class="reference"></sup></p>
+                        <p data-aos="fade-up">Com o passar dos anos alguns <a  title="Acidentes e incidentes aéreos">acidentes aéreos</a> aconteceram na região nos Andes, mas o mais famoso foi o ocorrido com <a  title="Voo Força Aérea Uruguaia 571">Voo Força Aérea Uruguaia 571</a>, mais conhecido como Tragédia dos Andes ou Milagre dos Andes (<i>El Milagro de los Andes</i>). Seus sobreviventes tiveram que ficar 72 dias na neve, comendo a carne dos passageiros que haviam morrido, restando no fim 16 sobreviventes.<sup id="cite_ref-3" class="reference"><a ></a></sup><sup id="cite_ref-4" class="reference"></sup></p>
+                        <a class="btn-saiba" data-aos="fade-up" href="https://pt.wikipedia.org/wiki/Andes">Saiba mais.</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0); 
+    });
+
+        AOS.init();
+        
+        let bg = document.getElementById("bg");
+        let mountain = document.getElementById("mountain");
+        let text = document.getElementById ("text");
+        let sunone = document.getElementById("sunone");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+            bg.style.top = value * 0.5 + 'px';
+            mountain.style.bottom = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+            sunone.style.right = -10 + value * (-0.3) + 'px';
+
+        })
+
+    </script>
+</body>
+</html>

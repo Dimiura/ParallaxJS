@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+ }
+
+ body
+ {
+    background: rgb(101, 165, 207)!important;
+    min-height:1500px;
+    font-family: 'Poppins', sans-serif!important;
+    color:#fff!important;
+ }
+
+.after-section-blend:before{
+    content: '' ;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #65a5cf, transparent); 
+    z-index: 10000;
+
+ }
+
+.after-section-blend:after{
+    content: '' ;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(101, 165, 207, 1);
+    z-index: 10000;
+    mix-blend-mode:color;
+
+ }
+
+ .after-section-blend
+ {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    background-color:transparent;
+    z-index: 1; 
+ }
+
+ .content
+ {
+   display:flex;
+   align-items:center;
+ }
+
+ section 
+ {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    background-color:transparent;
+    z-index: 1; 
+ }
+
+ section img 
+ {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    pointer-events: none;
+    z-index: -1;
+ }
+
+ #text 
+ {
+    position:relative;
+    color:#fff;
+    font-size:10em;
+    z-index:1;
+ }
+
+ .container .container-fluid
+ {
+   padding:15px;
+   margin-top:50px;
+ }
+
+ .container .container-fluid p
+ {
+   margin:20px;
+ }
+
+ .container .container-fluid h2
+ {
+ text-align:center;
+ }
+
+a{
+   color:#fff;
+   font-weight: bold;
+   text-decoration:none;
+}
+
+#mountain 
+{
+   top:250px;
+   z-index:2;
+}
+
+
+#sunone {
+   position: absolute; 
+   right: -10px;           
+   top: 5%;           
+   width: 150px;       
+   height: auto;       
+   z-index: 3;         
+}
+
+
+.arrows {
+   position: absolute;
+   bottom: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: center;
+   z-index: 10;
+   animation: fadeIn 1s ease-in-out;
+}
+
+.arrow {
+   width: 40px;
+   height: 40px;
+   border-right: 5px solid white; 
+   border-bottom: 5px solid white; 
+   transform: rotate(45deg); 
+   animation: pulse 1.5s infinite;
+   animation-delay: calc(var(--i) * 0.2s);
+}
+
+.btn-saiba
+{
+   transition: color 0.4s ease;
+   display: inline-block;
+   padding: 10px 20px;
+   font-size: 16px;
+   color: white;
+   background-color: rgb(74, 128, 163);
+   text-decoration: none;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+   z-index: 0;
+   border-radius:10px;
+}
+
+.btn-saiba::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%; 
+   width: 100%;
+   height: 100%;
+   background: white;
+   z-index: -1;
+   transition: left 0.4s ease; 
+}
+
+.btn-saiba:hover {
+   color: rgb(74, 128, 163); 
+}
+
+.btn-saiba:hover::before {
+   left: 0; 
+}
+
+.arrow:nth-child(1) {
+   --i: 0;
+}
+
+.arrow:nth-child(2) {
+   --i: 1;
+}
+
+@keyframes pulse {
+   0% {
+       transform: rotate(45deg) scale(1); 
+       opacity: 1;
+   }
+   50% {
+       transform: rotate(45deg) scale(1.2); 
+       opacity: 0.6;
+   }
+   100% {
+       transform: rotate(45deg) scale(1); 
+       opacity: 1;
+   }
+}
+
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+       transform: translateY(20px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+
+@media (max-width:768px)
+{
+   #text 
+   {
+      position:relative;
+      color:#fff;
+      font-size:3em;
+      z-index:1;
+   }
+
+   #sunone {
+      position: absolute; 
+      right: -10px;           
+      top: 15%;           
+      width: 150px;       
+      height: auto;       
+      z-index: 3;         
+   }
+
+   .content
+   {
+      display:block;
+   }
+
+   section 
+   {
+      position:relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display:flex;
+      justify-content: center;
+      background-color:transparent;
+      z-index: 1; 
+   }
+}
